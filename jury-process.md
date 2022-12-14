@@ -1,6 +1,6 @@
-# BAPC/NWERC Jury process
+# NWERC Jury process
 
-This WIP doc contains some remarks on things we do in the BAPC and NWERC jury.
+This WIP doc contains some remarks on things we do in the NWERC jury.
 
 ## Ideal scoreboard
 
