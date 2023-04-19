@@ -129,6 +129,9 @@ reliably.
 - We use British English for the statements.
   - Use Oxford commas when needed.
   - Use en-dash when needed -- do not use the longer em dash.
+  - Note the difference between "number" and "amount":
+    the first is for countable things (e.g., number of times),
+    while the latter is for uncountable things (e.g., amount of time).
 - Variable names: use lower case `$n$`, `$m$`, etc for numeric variables.
   For other types of variables, e.g. set-valued variables, upper case may be better.
 - The default is to use $1$-based indexing of e.g. nodes in graphs and
