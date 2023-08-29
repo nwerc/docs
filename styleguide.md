@@ -19,12 +19,14 @@ The input consists of:
   where $a_i$ is the value of Foo.
 - $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
 - $n$ lines, the $i$th of which contains two integers ...
+- $h$ lines with $w$ characters, each character being either ‘`#`’ or ‘`.`’, ...
+- $h$ lines, each with $w$ strings of $k$ characters $c$ ($c \in \\{\texttt{r}, \texttt{g}, \texttt{b}\\}$), ...
 - $n$ lines, each containing two numbers describing an event:
   - An integer $e$ ($1\leq e\leq 5$) the type of the event, and
   - a floating-point number $p$ ($0 < p < 1$ with at most $6$ digits after the decimal point),
     the probability of success.
 
-An optional remark regarding additional guarantees goes here, i.e., that a graph
+An optional remark regarding additional guarantees goes here, i.e. that a graph
 is connected or all input strings have length between $1$ and $20$ characters
 and only consist of English lowercase letters (`a-z`).
 
@@ -43,6 +45,8 @@ and only consist of English lowercase letters (`a-z`).
             where $a_i$ is the value of Foo.
         \item $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
         \item $n$ lines, the $i$th of which contains two integers ...
+        \item $h$ lines with $w$ characters, each character being either '\texttt{#}' or '\texttt{.}', ...
+        \item $h$ lines, each with $w$ strings of $k$ characters $c$ ($c \in \{\texttt{w}, \texttt{r}, \texttt{g}, \texttt{b}\}$), ...
         \item $n$ lines, each containing two numbers describing an event:
         \begin{itemize}
             \item An integer $e$ ($1\leq e\leq 5$) the type of the event, and
@@ -123,15 +127,18 @@ and only consist of English lowercase letters (`a-z`).
 
 Try to keep the Latex code as clean as possible, avoiding contorted
 tweaks to get your problem to look like you want. It should be
-possible to convert the problem statement to both pdf and html
+possible to convert the problem statement to both PDF and HTML
 reliably.
 
-- We use British English for the statements.
+- We use [Oxford English](https://en.wikipedia.org/wiki/Oxford_spelling) for the statements.
   - Use Oxford commas when needed.
+  - There should be no comma following "e.g." or "i.e.",
+    but preferably, use full phrases like "for example" or "that is".
+  - Use a small letter after a colon: like this.
   - Use en-dash when needed -- do not use the longer em dash.
   - Note the difference between "number" and "amount":
-    the first is for countable things (e.g., number of times),
-    while the latter is for uncountable things (e.g., amount of time).
+    the first is for countable things (e.g. number of times),
+    while the latter is for uncountable things (e.g. amount of time).
 - Variable names: use lower case `$n$`, `$m$`, etc for numeric variables.
   For other types of variables, e.g. set-valued variables, upper case may be better.
 - The default is to use $1$-based indexing of e.g. nodes in graphs and
@@ -152,12 +159,12 @@ reliably.
 
 - Use exponents for values of 10⁵ and larger, e.g. `$10^6$` rather than `$1\,000\,000$`.
 - For numbers of five or more digits, use `\,` (small space) to create groups of three
-  digits, e.g., `$25\,000$`: $25\,000$ instead of $25000$.
-  Smaller numbers (e.g., $2500$) are fine without separating space.
+  digits, e.g. `$25\,000$`: $25\,000$ instead of $25000$.
+  Smaller numbers (e.g. $2500$) are fine without separating space.
 - Always put numbers in math mode throughout the text, e.g. $42$
   rather than 42.
 - $i$th (`$i$th`), not $i$:th, $i$-th, or $i$'th.
-- Do not use contractions (i.e., write "do not" instead of "don't", etc)
+- Do not use contractions (i.e. write "do not" instead of "don't", etc)
 - Formatting units: $1\text{ cm}$ (`$1\text{ cm}$`) etc.
 - String literals are both ` ``quoted'' ` and `\texttt`:
   ```
@@ -177,15 +184,16 @@ statements: illustrations and figures.
 
 An **illustration** is a non-essential eye candy picture whose only
 purpose is to make the problem statement look prettier. The template
-provides a command `\illustration{width%}{image}{attribution}` to
+provides a command `\illustration{width%}{image}{caption+attribution}` to
 typeset illustrations. Its arguments are:
 
 - `width%`: a number between 0 and 1, the desired width of the illustration, as fraction of the total page width.
 - `image`: the image file to be included.
-- `attribution`: attribution for the image
+- `caption+attribution`: caption (optional) and attribution for the image
 
 ```
-\illustration{0.3}{image.jpg}{\href{https://www.some.url}{Figure} by Person, Pixabay} % CC-BY-SA
+\illustration{0.3}{image.jpg}{Description of the illustration. CC BY-SA 4.0 by Person on Pixabay}
+% Source: https://example.com/
 ```
 
 A **figure** is an essential picture explaining or clarifying some
@@ -208,3 +216,7 @@ section with:
 ```
 See Figure~\ref{fig:a} for an example.
 ```
+
+Note that inline graphics (like `tikz`) do not work well when converting the problem statement to HTML,
+so if you want to generate a figure using inline commands,
+please do so in a separate TeX file with a small `Makefile` and include the resulting PDF.
