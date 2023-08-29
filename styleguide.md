@@ -71,8 +71,10 @@ and only consist of English lowercase letters (`a-z`).
 - Do not write `single`. Just say `One line with an integer $n$`.
 - Do not write `Then follow` for bullet points after the first one.
 - When possible, mention all variables at the start of the sentence: `One line with two integers $n$ and $m$ (..), ...`.
+- Do not reuse variable names.
 - Separate multiple constraints into separate math environments: `($n \leq 100$, $m \leq 100$, $n \neq m$)`.
 - If a constraint is symmetric around zero, use the absolute value: `($\left| x_i \right| \leq 100$)`.
+- Use inclusive lower/upper bounds when possible: `($2 \leq n \leq 100$, $0 \leq m \leq 99\,999$, $1 \leq k < 2 \cdot 10^5$)`.
 - When using indices, always quantify over them properly.
 - Don't introduce indices unless you need them.
 - Do not write "separated by single spaces" and similar general
@@ -106,7 +108,7 @@ and only consist of English lowercase letters (`a-z`).
   just write `Output ...`
 - Even when the output goes on multiple lines, just writing `Output the number of integers, followed by these integers.` is usually sufficient.
 - If the problem is to find something or output impossible: ` If {ABC} then output {XYZ}. Otherwise, output ``\texttt{impossible}''. `
-- Real-valued tolerance: `Your answer should have an absolute or relative error of at most 10−6.` (with $10^{-6}$ replaced by
+- Real-valued tolerance: `Your answer should have an absolute or relative error of at most $10^{-6}$.` (with $10^{-6}$ replaced by
   whatever tolerance the problem uses)
 - Accepting any valid solution: `If there are multiple valid/optimal solutions, you may output any one of them.`
 - Imposing technical restrictions on the output not part of the
@@ -123,6 +125,76 @@ and only consist of English lowercase letters (`a-z`).
   - When input is arbitrary integers, do not only include positive integers.
   - ...
 
+## Interaction Sections
+
+Instead of hardcoded `.in` and `.ans` for the samples,
+you can create one or more `.interaction` files of the following form:
+
+- each line preceded by `<` appears on the left (i.e. team input/validator output)
+- each line preceded by `>` appears on the right (i.e. team output/validator input)
+
+For example, a binary search sample could be this:
+
+```
+<10
+>5
+<larger
+>7
+<smaller
+>6
+<correct
+```
+
+The interaction section itself must consist of:
+
+- An introductory paragraph, announcing that the problem is interactive
+- A few paragraphs describing the input/output protocol
+- Optionally "If there are multiple valid solutions, you may output any one of them."
+- "The interactor is (not) adaptive", with an explanation of what this means
+- "Make sure you flush the buffer after each write."
+- "A testing tool is provided to help you develop your solution."
+  - This testing tool is provided in `attachments/` and usually written in Python.
+    See interactive problems from previous years for examples.
+- "Using more than `$\maxq$` queries will result in a wrong answer."
+
+<details><summary>You can use the following as a template:</summary>
+
+```
+\begin{Interaction}
+    This is an interactive problem.
+    Your submission will be run against an \emph{interactor},
+    which reads from the standard output of your submission
+    and writes to the standard input of your submission.
+    This interaction needs to follow a specific protocol:
+
+    The interactor first sends
+    one line with two integers $w$ and $h$ ($1\leq w\leq \maxw$, $1\leq h\leq \maxh$),
+    the width and height of ...
+
+    Then, your program should make at most $\maxq$ queries to find the [answer].
+    Each query is made by printing one line of the form ``\texttt{?~$x$~$y$}'' ($1\leq x\leq w$, $1\leq y\leq h$).
+    The interactor will respond with ...,
+    indicating the ...
+
+    When you have determined the [answer] $x$,
+    print one line of the form ``\texttt{!~$x$}'',
+    after which the interaction will stop.
+    Printing the answer does not count as a query.
+
+    If there are multiple valid solutions, you may output any one of them.
+
+    The interactor is not adaptive: the ... are fixed up front, and do not depend on your queries.
+
+    Make sure you flush the buffer after each write.
+
+    A testing tool is provided to help you develop your solution.
+
+    Using more than $\maxq$ queries will result in a wrong answer.
+\end{Interaction}
+```
+
+</details>
+
 ## General guidelines
 
 Try to keep the Latex code as clean as possible, avoiding contorted
@@ -132,28 +204,34 @@ reliably.
 
 - We use [Oxford English](https://en.wikipedia.org/wiki/Oxford_spelling) for the statements.
   - Use Oxford commas when needed.
-  - There should be no comma following "e.g." or "i.e.",
-    but preferably, use full phrases like "for example" or "that is".
+  - There should be no comma following "e.g." or "i.e.", e.g. like this.
+    Preferably, use full phrases like "for example" or "that is"
+    (which _are_ followed by a comma, for example, like this).
   - Use a small letter after a colon: like this.
   - Use en-dash when needed -- do not use the longer em dash.
   - Note the difference between "number" and "amount":
     the first is for countable things (e.g. number of times),
     while the latter is for uncountable things (e.g. amount of time).
+  - Prefer neutral singular pronouns ("they"/"their"/"them") when possible.
 - Variable names: use lower case `$n$`, `$m$`, etc for numeric variables.
   For other types of variables, e.g. set-valued variables, upper case may be better.
 - The default is to use $1$-based indexing of e.g. nodes in graphs and
   other sets of items given serial IDs, but in cases where $0$-based
   indexing becomes cleaner this may be OK (e.g. if there are lists of
   $n+1$ things, naming them $x_0$ up to $x_n$ may be preferable).
-- Don't use phrases along the lines of "Can you help protagonist do
+- Do not use phrases along the lines of "Can you help protagonist do
   X?" (in particular in cases when the answer is always yes for a
   sufficiently competent value of "you"). Instead use imperative
   form: "Help X with Y."
+- The imperative verb "calculate" tends to be overused,
+  you can switch it up with "compute", "find", or "determine".
 - Avoid long lines in the Latex source. Shorter lines usually give better commit
   diffs where there are small changes. Either wrapping at 80/100 chars or at the
   end of sentences is fine.
 - Use variables for the problem bounds, and name them specific to the problem:
   `\newcommand{\Amaxn}{10^9}`.
+- Use "vertex" for graphs (including trees), and "node" for data structures.
+- Write "connected undirected graph" instead of "undirected connected graph".
 
 ## Formatting/typesetting details
 
@@ -192,8 +270,7 @@ typeset illustrations. Its arguments are:
 - `caption+attribution`: caption (optional) and attribution for the image
 
 ```
-\illustration{0.3}{image.jpg}{Description of the illustration. CC BY-SA 4.0 by Person on Pixabay}
-% Source: https://example.com/
+\illustration{0.3}{image.jpg}{Description of the illustration. CC BY-SA 4.0 by Person on \href{https://example.com/reference-to-image}{Pixabay}}
 ```
 
 A **figure** is an essential picture explaining or clarifying some
