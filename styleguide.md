@@ -243,8 +243,8 @@ reliably.
   rather than 42.
 - $i$th (`$i$th`), not $i$:th, $i$-th, or $i$'th.
 - Do not use contractions (i.e. write "do not" instead of "don't", etc)
-- Formatting quantities: `\SI{value}{unit}` (e.g. `$\SI{3}{\cm\per\second\squared}$`). We use version 2 of the [siunitx](https://ctan.org/pkg/siunitx) package for compatibility reasons.
-- Formatting units: `\si{unit}` (e.g. `$\si{\cm\per\second\squared}$`).
+- Formatting quantities: `value\,\textrm{unit}` (e.g. `$3\,\textrm{cm}$`). This style is compatible with the [siunitx](https://ctan.org/pkg/siunitx) package.
+- Formatting units: `\textrm{unit}` (e.g. `$\textrm{cm}$`).
 - String literals are both ` ``quoted'' ` and `\texttt`:
   ```
   ``\texttt{impossible}''
