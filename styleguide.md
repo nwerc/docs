@@ -235,7 +235,7 @@ reliably.
 
 ## Formatting/typesetting details
 
-- Use exponents for values of 10⁵ and larger, e.g. `$10^6$` rather than `$1\,000\,000$`.
+- Use exponents for values of $10^5$ and larger, e.g. `$10^6$` rather than `$1\,000\,000$`.
 - For numbers of five or more digits, use `\,` (small space) to create groups of three
   digits, e.g. `$25\,000$`: $25\,000$ instead of $25000$.
   Smaller numbers (e.g. $2500$) are fine without separating space.
@@ -243,7 +243,8 @@ reliably.
   rather than 42.
 - $i$th (`$i$th`), not $i$:th, $i$-th, or $i$'th.
 - Do not use contractions (i.e. write "do not" instead of "don't", etc)
-- Formatting units: $1\text{ cm}$ (`$1\text{ cm}$`) etc.
+- Formatting quantities: `value\,\textrm{unit}` (e.g. `$3\,\textrm{cm}$`). This style is compatible with the [siunitx](https://ctan.org/pkg/siunitx) package.
+- Formatting units: `\textrm{unit}` (e.g. `$\textrm{cm}$`).
 - String literals are both ` ``quoted'' ` and `\texttt`:
   ```
   ``\texttt{impossible}''
