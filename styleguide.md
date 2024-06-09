@@ -19,6 +19,7 @@ The input consists of:
   where $a_i$ is the value of Foo.
 - $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
 - $n$ lines, the $i$th of which contains two integers ...
+- $n$ lines, each with a string $w$ ($1\leq |w|\leq 20$), ...
 - $h$ lines with $w$ characters, each character being either ‘`#`’ or ‘`.`’, ...
 - $h$ lines, each with $w$ strings of $k$ characters $c$ ($c \in \\{\texttt{r}, \texttt{g}, \texttt{b}\\}$), ...
 - $n$ lines, each containing two numbers describing an event:
@@ -45,6 +46,7 @@ and only consist of English lowercase letters (`a-z`).
             where $a_i$ is the value of Foo.
         \item $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
         \item $n$ lines, the $i$th of which contains two integers ...
+        \item $n$ lines, each with a string $w$ ($1\leq |w|\leq 20$), ...
         \item $h$ lines with $w$ characters, each character being either '\texttt{#}' or '\texttt{.}', ...
         \item $h$ lines, each with $w$ strings of $k$ characters $c$ ($c \in \{\texttt{w}, \texttt{r}, \texttt{g}, \texttt{b}\}$), ...
         \item $n$ lines, each containing two numbers describing an event:
@@ -70,7 +72,7 @@ and only consist of English lowercase letters (`a-z`).
 - Use a comma between the description of what appears in input and the description of what it means.
 - Do not write `single`. Just say `One line with an integer $n$`.
 - Do not write `Then follow` for bullet points after the first one.
-- When possible, mention all variables at the start of the sentence: `One line with two integers $n$ and $m$ (..), ...`.
+- When possible, mention all variables at the start of the sentence: `One line with two integers $n$ and $m$ (...), ...`.
 - Do not reuse variable names.
 - Separate multiple constraints into separate math environments: `($n \leq 100$, $m \leq 100$, $n \neq m$)`.
 - If a constraint is symmetric around zero, use the absolute value: `($\left| x_i \right| \leq 100$)`.
@@ -97,20 +99,22 @@ and only consist of English lowercase letters (`a-z`).
 
 ## Output Sections
 
-- Write `Output an integer`: `Output the number of {ABC} such that {XYZ}.`
+- The basic phrasing is `Output the number of {ABC} such that {XYZ}.`
 - Don't use funny output phrases, just plain
-  `yes`/`no`/`possible`/`impossible` (and all lower case), whichever is
+  `yes`/`no`/`possible`/`impossible` (and all lowercase), whichever is
   appropriate. The statement should both quote and texttt the text:
   ```
   ``\texttt{impossible}''
   ```
-- Output is usually not space sensitive - don't write `Output one line ...`,
-  just write `Output ...`
+- Output is usually not space sensitive – don't write `Output two lines ...` or `Output two space-separated ...`,
+  just write `Output two ...`
 - Even when the output goes on multiple lines, just writing `Output the number of integers, followed by these integers.` is usually sufficient.
-- If the problem is to find something or output impossible: ` If {ABC} then output {XYZ}. Otherwise, output ``\texttt{impossible}''. `
+- If the problem is to find something or output impossible: ` If it is possible to {ABC}, output {XYZ}. Otherwise, output ``\texttt{impossible}''. `
 - Real-valued tolerance: `Your answer should have an absolute or relative error of at most $10^{-6}$.` (with $10^{-6}$ replaced by
-  whatever tolerance the problem uses)
+  whatever tolerance the problem uses).
+  This sentence should form its own paragraph.
 - Accepting any valid solution: `If there are multiple valid/optimal solutions, you may output any one of them.`
+  This sentence should form its own paragraph.
 - Imposing technical restrictions on the output not part of the
   underlying problem, for the purposes of making judging feasible:
   describe these after the general description of the output format
@@ -212,6 +216,8 @@ reliably.
   - Note the difference between "number" and "amount":
     the first is for countable things (e.g. number of times),
     while the latter is for uncountable things (e.g. amount of time).
+  - Note the difference between "for each" (which stresses individual items)
+    and "for every"/"for all" (which refers to the group of items collectively).
   - Prefer neutral singular pronouns ("they"/"their"/"them") when possible.
 - Variable names: use lower case `$n$`, `$m$`, etc for numeric variables.
   For other types of variables, e.g. set-valued variables, upper case may be better.
@@ -295,6 +301,7 @@ section with:
 See Figure~\ref{fig:a} for an example.
 ```
 
-Note that inline graphics (like `tikz`) do not work well when converting the problem statement to HTML,
+Note that inline graphics (like `tikz`) do not work well when converting the problem statement to HTML
+(e.g. for [Kattis](https://open.kattis.com/search?q=nwerc)),
 so if you want to generate a figure using inline commands,
 please do so in a separate TeX file with a small `Makefile` and include the resulting PDF.
