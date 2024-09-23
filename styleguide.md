@@ -128,6 +128,8 @@ and only consist of English lowercase letters (`a-z`).
   - When input is not guaranteed to be sorted, include non-sorted sample.
   - When input is arbitrary integers, do not only include positive integers.
   - ...
+- For problems with real-valued output, do not hardcode the answer file (unless it's a round number).
+  Instead, use an accepted submission that outputs the correct output with the desired number of digits to generate the answer of the sample.
 
 ## Interaction Sections
 
