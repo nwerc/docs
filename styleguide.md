@@ -303,6 +303,9 @@ section with:
 See Figure~\ref{fig:a} for an example.
 ```
 
+It may sometimes be preferable to omit the reference to the figure, e.g.
+if it would just repeat the caption and would therefore feel redundant.
+
 Note that inline graphics (like `tikz`) do not work well when converting the problem statement to HTML
 (e.g. for [Kattis](https://open.kattis.com/search?q=nwerc)),
 so if you want to generate a figure using inline commands,
