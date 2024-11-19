@@ -15,6 +15,7 @@ The input consists of:
   the number of Foo and the number of Bar.
 - One line with three integers $a$, $b$, and $c$ ($1 \le a, b, c \le 1000$, $a \neq b$, $b < c$),
   the number of Foo, the number of Bar, and the number of Baz.
+- One line with $n$ integers $a$ ($0\le a\le 10^9$), the values of Foo.
 - One line with $n$ integers $a_1, \ldots, a_n$ ($0\le a_i\le 10^9$ for each $i$),
   where $a_i$ is the value of Foo.
 - $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
@@ -42,6 +43,7 @@ and only consist of English lowercase letters (`a-z`).
             the number of Foo and the number of Bar.
         \item One line with three integers $a$, $b$, and $c$ ($1 \le a, b, c \le 1000$, $a \neq b$, $b < c$),
             the number of Foo, the number of Bar, and the number of Baz.
+        \item One line with $n$ integers $a$ ($0\le a\le 10^9$), the values of Foo.
         \item One line with $n$ integers $a_1, \ldots, a_n$ ($0\le a_i\le 10^9$ for each $i$),
             where $a_i$ is the value of Foo.
         \item $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
@@ -77,8 +79,9 @@ and only consist of English lowercase letters (`a-z`).
 - Separate multiple constraints into separate math environments: `($n \leq 100$, $m \leq 100$, $n \neq m$)`.
 - If a constraint is symmetric around zero, use the absolute value: `($\left| x_i \right| \leq 100$)`.
 - Use inclusive lower/upper bounds when possible: `($2 \leq n \leq 100$, $0 \leq m \leq 99\,999$, $1 \leq k < 2 \cdot 10^5$)`.
-- When using indices, always quantify over them properly.
+- When the input is a grid of open and filled squares, use '`.`' and '`#`' (not '`x`' or '`X`').
 - Don't introduce indices unless you need them.
+- When using indices, always quantify over them properly.
 - Do not write "separated by single spaces" and similar general
   formatting rules that always apply (but if for some reason amount of
   spaces may vary, do write this).
@@ -101,7 +104,7 @@ and only consist of English lowercase letters (`a-z`).
 
 - The basic phrasing is `Output the number of {ABC} such that {XYZ}.`
 - Don't use funny output phrases, just plain
-  `yes`/`no`/`possible`/`impossible` (and all lowercase), whichever is
+  `yes`/`no`/`possible`/`impossible`/`infinity` (and all lowercase), whichever is
   appropriate. The statement should both quote and texttt the text:
   ```
   ``\texttt{impossible}''
@@ -240,6 +243,10 @@ reliably.
   `\newcommand{\Amaxn}{10^9}`.
 - Use "vertex" for graphs (including trees), and "node" for data structures.
 - Write "connected undirected graph" instead of "undirected connected graph".
+- When describing an undirected graph using non-math terminology, write
+  "every pair of \<vertices\> is connected by at most one \<edge\>",
+  where "\<vertices\>" can be "intersections"/"stores"/etc.
+  and "\<edges\>" can be "roads"/"lines"/etc.
 
 ## Formatting/typesetting details
 
