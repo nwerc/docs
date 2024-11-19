@@ -241,6 +241,10 @@ reliably.
   end of sentences is fine.
 - Use variables for the problem bounds, and name them specific to the problem:
   `\newcommand{\Amaxn}{10^9}`.
+- Ask for a "minimal/maximal \<solution\>" when there can be multiple,
+  ask for a "minimum/maximum \<solution\>" when there can be only one.
+  - An alternative to asking for a "minimum/maximum length of all \<something\>":
+   "Output the length of a shortest/longest \<something\>."
 - Use "vertex" for graphs (including trees), and "node" for data structures.
 - Write "connected undirected graph" instead of "undirected connected graph".
 - When describing an undirected graph using non-math terminology, write
