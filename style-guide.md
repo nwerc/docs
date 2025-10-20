@@ -1,4 +1,4 @@
-# NWERC Problem Statement Styleguide
+# NWERC Problem Statement Style Guide
 
 ## Input Sections
 
@@ -226,7 +226,7 @@ reliably.
   - Prefer neutral singular pronouns ("they"/"their"/"them") when possible.
 - Variable names: use lower case `$n$`, `$m$`, etc for numeric variables.
   For other types of variables, e.g. set-valued variables, upper case may be better.
-- The default is to use $1$-based indexing of e.g. nodes in graphs and
+- The default is to use $1$-based indexing of e.g. vertices in graphs and
   other sets of items given serial IDs, but in cases where $0$-based
   indexing becomes cleaner this may be OK (e.g. if there are lists of
   $n+1$ things, naming them $x_0$ up to $x_n$ may be preferable).
@@ -248,7 +248,7 @@ reliably.
 - Use "vertex" for graphs (including trees), and "node" for data structures.
 - Write "connected undirected graph" instead of "undirected connected graph".
 - When describing an undirected graph using non-math terminology, write
-  "every pair of \<vertices\> is connected by at most one \<edge\>",
+  "each pair of \<vertices\> is connected by at most one \<edge\>",
   where "\<vertices\>" can be "intersections"/"stores"/etc.
   and "\<edges\>" can be "roads"/"lines"/etc.
 
@@ -262,7 +262,8 @@ reliably.
   rather than 42.
 - $i$th (`$i$th`), not $i$:th, $i$-th, or $i$'th.
 - Do not use contractions (i.e. write "do not" instead of "don't", etc)
-- Formatting quantities: `value\,\textrm{unit}` (e.g. `$3\,\textrm{cm}$`). This style is compatible with the [siunitx](https://ctan.org/pkg/siunitx) package.
+- Formatting quantities: `value\,\textrm{unit}` (e.g. `$3\,\textrm{cm}$`).
+  This style is compatible with the [siunitx](https://ctan.org/pkg/siunitx) package.
 - Formatting units: `\textrm{unit}` (e.g. `$\textrm{cm}$`).
 - String literals are both ` ``quoted'' ` and `\texttt`:
   ```
@@ -290,7 +291,10 @@ typeset illustrations. Its arguments are:
 - `caption+attribution`: caption (optional) and attribution for the image
 
 ```
-\illustration{0.3}{image.jpg}{Description of the illustration. CC BY-SA 4.0 by Person on \href{https://example.com/reference-to-image}{Pixabay}}
+\illustration{0.3}{image.jpg}{
+    Caption of the illustration (optional).
+    CC BY-SA 4.0 by X on \href{https://example.com/reference-to-image}{Y}
+}
 ```
 
 A **figure** is an essential picture explaining or clarifying some
