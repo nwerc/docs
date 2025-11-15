@@ -258,8 +258,9 @@ reliably.
 - For numbers of five or more digits, use `\,` (small space) to create groups of three
   digits, e.g. `$25\,000$`: $25\,000$ instead of $25000$.
   Smaller numbers (e.g. $2500$) are fine without separating space.
-- Always put numbers in math mode throughout the text, e.g. $42$
-  rather than 42.
+- Put numbers in math mode throughout the text, e.g. $42$ rather than 42.
+  Exceptions are dates/years (e.g. "23 June 1912")
+  and references to sample cases (e.g. "Illustration of Sample Input 1").
 - $i$th (`$i$th`), not $i$:th, $i$-th, or $i$'th.
 - Do not use contractions (i.e. write "do not" instead of "don't", etc)
 - Formatting quantities: `value\,\textrm{unit}` (e.g. `$3\,\textrm{cm}$`).
@@ -306,7 +307,7 @@ would be:
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.5\textwidth]{a}
-\caption{Illustration of Sample Input/Output 1, where the answer is 42.}
+\caption{Illustration of Sample Input/Output 1, where the answer is $42$.}
 \label{fig:a}
 \end{figure}
 ```
