@@ -32,7 +32,7 @@ The input consists of:
 
 An optional remark regarding additional guarantees goes here, i.e. that a graph
 is connected or all input strings have length between $1$ and $20$ characters
-and consist only of English lowercase letters (`a-z`).
+and only consist of English lowercase letters (`a-z`).
 
 <details><summary>LaTeX source</summary>
 
@@ -63,7 +63,7 @@ and consist only of English lowercase letters (`a-z`).
     \end{itemize}
     An optional remark regarding additional guarantees goes here, i.e. that a graph
     is connected or all input strings have length between $1$ and $20$ characters
-    and consist of only English lowercase letters (\texttt{a-z}).
+    and only consist of English lowercase letters (\texttt{a-z}).
 \end{Input}
 ```
 
