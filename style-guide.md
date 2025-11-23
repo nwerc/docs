@@ -18,6 +18,7 @@ The input consists of:
 - One line with $n$ integers $a_1, \ldots, a_n$ ($0\le a_i\le 10^9$ for each $i$),
   where $a_i$ is the value of Foo.
 - $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
+- $n$ lines, each with two integers $a$ and $b$ ($0\leq a, b \leq 100$), ...
 - $n$ lines, the $i$th of which contains two integers ...
 - $n$ lines, each with a string $w$ ($1\leq |w|\leq 20$), ...
 - $h$ lines with $w$ characters, each character being either ‘`#`’ or ‘`.`’, ...
@@ -26,6 +27,8 @@ The input consists of:
   - An integer $e$ ($1\leq e\leq 5$) the type of the event, and
   - a floating-point number $p$ ($0 < p < 1$ with at most $6$ digits after the decimal point),
     the probability of success.
+- One line with an integer $t$ ($1\le t\le 100$), the number of test cases.
+- For each test case, the input consists of:
 
 An optional remark regarding additional guarantees goes here, i.e. that a graph
 is connected or all input strings have length between $1$ and $20$ characters
@@ -55,7 +58,8 @@ and only consist of English lowercase letters (`a-z`).
             \item a floating-point number $p$ ($0 < p < 1$ with at most $6$ digits after the decimal point),
                 the probability of succes.
         \end{itemize}
-        \end{itemize}
+        \item One line with an integer $t$ ($1\le t\le 100$), the number of test cases.
+        \item For each test case, the input consists of:
     \end{itemize}
     An optional remark regarding additional guarantees goes here, i.e. that a graph
     is connected or all input strings have length between $1$ and $20$ characters
@@ -121,6 +125,7 @@ and only consist of English lowercase letters (`a-z`).
   describe these after the general description of the output format
   (c.f. NWERC 2018 Circuit Design and NWERC 2018 Game Design).
 - Do not use itemize.
+- `For each test case, output ...`
 
 ## Samples
 
