@@ -207,6 +207,22 @@ The interaction section itself must consist of:
 
 </details>
 
+## Multipass problems
+
+At the end of the input section, after the format specification and optionally guarantees:
+
+- This is a multi-pass problem. Your program will be invoked two times.
+- This is a multi-pass problem. Your program will be invoked multiple times, possibly more than twice.
+- It is guaranteed that the first pass is ..., and that each subsequent pass is ....
+- A testing tool is provided to help you develop your solution.
+
+Output section:
+```
+If the action is ``\texttt{X}'', output ...
+
+If the action is ``\texttt{Y}'', output ...
+```
+
 ## General guidelines
 
 Try to keep the Latex code as clean as possible, avoiding contorted
