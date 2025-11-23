@@ -15,7 +15,6 @@ The input consists of:
   the number of Foo and the number of Bar.
 - One line with three integers $a$, $b$, and $c$ ($1 \le a, b, c \le 1000$, $a \neq b$, $b < c$),
   the number of Foo, the number of Bar, and the number of Baz.
-- One line with $n$ integers $a$ ($0\le a\le 10^9$), the values of Foo.
 - One line with $n$ integers $a_1, \ldots, a_n$ ($0\le a_i\le 10^9$ for each $i$),
   where $a_i$ is the value of Foo.
 - $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
@@ -43,7 +42,6 @@ and only consist of English lowercase letters (`a-z`).
             the number of Foo and the number of Bar.
         \item One line with three integers $a$, $b$, and $c$ ($1 \le a, b, c \le 1000$, $a \neq b$, $b < c$),
             the number of Foo, the number of Bar, and the number of Baz.
-        \item One line with $n$ integers $a$ ($0\le a\le 10^9$), the values of Foo.
         \item One line with $n$ integers $a_1, \ldots, a_n$ ($0\le a_i\le 10^9$ for each $i$),
             where $a_i$ is the value of Foo.
         \item $n$ lines, each with an integer $k$ ($0\leq k \leq 100$), ...
