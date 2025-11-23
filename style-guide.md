@@ -214,6 +214,7 @@ At the end of the input section, after the format specification and optionally g
 - This is a multi-pass problem. Your program will be invoked two times.
 - This is a multi-pass problem. Your program will be invoked multiple times, possibly more than twice.
 - It is guaranteed that the first pass is ..., and that each subsequent pass is ....
+- For testing purposes, the number and input of subsequent passes will depend on the output of your submission.
 - A testing tool is provided to help you develop your solution.
 
 Output section:
