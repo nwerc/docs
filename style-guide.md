@@ -2,9 +2,10 @@
 
 ## Input Sections
 
-Input Sections are in "Dutch style": an itemized list of lines, possibly
-followed by some remarks. Most items
-exactly follow one of the forms in this sample:
+Input Sections are in "itemized style":
+each item describes exactly one kind of input line.
+The list may be followed by general remarks.
+Most items exactly follow one of the forms in this sample:
 
 ### Input
 
