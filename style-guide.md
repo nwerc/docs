@@ -286,7 +286,7 @@ reliably.
 - Do not use contractions (i.e. write "do not" instead of "don't", etc)
 - Formatting quantities: `value\,\textrm{unit}` (e.g. `$3\,\textrm{cm}$`).
   This style is compatible with the [siunitx](https://ctan.org/pkg/siunitx) package.
-- Formatting units: `\textrm{unit}` (e.g. `$\textrm{cm}$`).
+- Formatting units: `\textrm{unit}` (e.g. `$\textrm{cm}$`, `\textrm{m}/\textrm{s}^2`).
 - String literals are both ` ``quoted'' ` and `\texttt`:
   ```
   ``\texttt{impossible}''
